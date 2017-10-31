@@ -2,9 +2,16 @@
   <div id="app">
     <div class="section">
       <div class="container">
-        <parent/>
-        <first/>
-        <second/>
+        <div class="box">
+          <parent/>
+        </div>
+        <div class="box">
+          <first/>
+        </div>
+        <div class="box">
+          <second/>
+        </div>
+
       </div>
    </div>
   </div>
@@ -26,7 +33,6 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

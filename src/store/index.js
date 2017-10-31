@@ -9,7 +9,7 @@ export default new Vuex.Store({
   },
 
   mutations: {
-    changeTest(state, payload) {
+    changeTest (state, payload) {
       state.test = payload
     }
   }

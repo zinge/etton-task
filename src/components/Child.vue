@@ -1,13 +1,16 @@
 <template>
   <div id="child">
     <h3>This child component</h3>
-    <ul>
-      <li v-for="(value, index) in user" :key="index.id">{{index + ': ' + value}}</li>
-    </ul>
-    <br>
-    <p>Child to parent form</p>
-    <input type="text" v-model="childData">
-    <button @click="sendToParent">send to parent</button>
+    <div class="box">
+      <p>Data from parent:</p>
+      <ul>
+        <li v-for="(value, index) in user" :key="index.id">{{index + ': ' + value}}</li>
+      </ul>
+      <hr>
+      <p>Child to parent form</p>
+      <input type="text" v-model="childData">
+      <button @click="sendToParent">send to parent</button>
+    </div>
   </div>
 </template>
 
