@@ -4,6 +4,10 @@
     <ul>
       <li v-for="(value, index) in user" :key="index.id">{{index + ': ' + value}}</li>
     </ul>
+    <br>
+    <p>Child to parent form</p>
+    <input type="text" v-model="childData">
+    <button @click="sendToParent">send to porent</button>
   </div>
 </template>
 
@@ -11,6 +15,16 @@
 export default {
   name: 'Child',
 
-  props: ['user']
+  data: () => ({
+    childData: ''
+  }),
+
+  props: ['user'],
+
+  methods: {
+    sendToParent () {
+      this.$emit('backToParent', this.childData)
+    }
+  }
 }
 </script>

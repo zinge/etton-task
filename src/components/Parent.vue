@@ -7,8 +7,10 @@
     <input type="number" v-model="parentUser.age"></input><br>
     <p>Enter you phone</p>
     <input type="tel" v-model="parentUser.phone"></input><br><br>
-    <button @click="sendToChild()">send to child</button>
-    <child :user="childUser"/>
+    <button @click="sendToChild()">send to child</button><br>
+    <p>Data from child</p>
+    {{childData}}
+    <child :user="childUser" v-on:backToParent="(data) => {this.childData = data}"/>
   </div>
 </template>
 
@@ -25,7 +27,9 @@ export default {
       phone: ''
     },
 
-    childUser: {}
+    childUser: {},
+
+    childData: ''
   }),
 
   components: {
