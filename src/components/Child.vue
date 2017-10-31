@@ -7,7 +7,7 @@
     <br>
     <p>Child to parent form</p>
     <input type="text" v-model="childData">
-    <button @click="sendToParent">send to porent</button>
+    <button @click="sendToParent">send to parent</button>
   </div>
 </template>
 
