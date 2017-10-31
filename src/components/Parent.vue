@@ -2,13 +2,13 @@
   <div id="parent">
     <h3>This parent component</h3>
     <p>Enter you name</p>
-    <input type="text" v-model="user.name"></input><br>
+    <input type="text" v-model="parentUser.name"></input><br>
     <p>Enter you age</p>
-    <input type="number" v-model="user.age"></input><br>
+    <input type="number" v-model="parentUser.age"></input><br>
     <p>Enter you phone</p>
-    <input type="tel" v-model="user.phone"></input><br>
-
-    <child :user="user"/>
+    <input type="tel" v-model="parentUser.phone"></input><br><br>
+    <button @click="sendToChild()">send to child</button>
+    <child :user="childUser"/>
   </div>
 </template>
 
@@ -19,15 +19,23 @@ export default {
   name: 'Parent',
 
   data: () => ({
-    user: {
+    parentUser: {
       name: '',
       age: '',
       phone: ''
-    }
+    },
+
+    childUser: {}
   }),
 
   components: {
     Child
+  },
+
+  methods: {
+    sendToChild () {
+      this.childUser = this.parentUser
+    }
   }
 }
 </script>
