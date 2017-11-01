@@ -27,6 +27,7 @@ export default {
   methods: {
     sendToParent () {
       this.$emit('backToParent', this.childData)
+      this.childData = ''
     }
   }
 }
