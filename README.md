@@ -1,5 +1,7 @@
 # etton-task
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zinge/etton-task.svg)](https://greenkeeper.io/)
+
 > A Vue.js project
 
 ## Build Setup
